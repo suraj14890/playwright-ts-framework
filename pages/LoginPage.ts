@@ -14,7 +14,7 @@ export class LoginPage {
   }
 
   async open(): Promise<void> {
-    await this.page.goto('https://www.saucedemo.com');
+    await this.page.goto('/');  
   }
 
   async login(user: string, pass: string): Promise<void> {

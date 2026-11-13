@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
+test.use({ launchOptions: { slowMo: 1000 } }); 
 
 test('valid user can log in', async ({ page }) => {
   const loginPage = new LoginPage(page);

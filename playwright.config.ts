@@ -25,11 +25,11 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    baseURL: 'https://www.saucedemo.com',  // tests can now use page.goto('/')
+    screenshot: 'only-on-failure',         // photo of the page when a test fails
+    video: 'retain-on-failure',            // keep a video only for failed tests
+    trace: 'retain-on-failure',            // keep a full trace only for failed tests
+    actionTimeout: 10_000,                 // each click/fill waits max 10 s
   },
 
   /* Configure projects for major browsers */
