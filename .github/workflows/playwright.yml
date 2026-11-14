@@ -4,6 +4,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '30 20 * * *'      # every night at 20:30 UTC (2 AM India time)
   workflow_dispatch:
 jobs:
   test:
