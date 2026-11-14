@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {                         // runs before EVE
 test('products page shows 6 items', async ({ page }) => {
   const inventory = new InventoryPage(page);
   await expect(inventory.title).toHaveText('Products');      // exact text check
-  await expect(inventory.items).toHaveCount(7);              // count check
+  await expect(inventory.items).toHaveCount(6);              // count check
 });
 
 test('add and remove a product from the cart', async ({ page }) => {
